@@ -1,3 +1,3 @@
-aiogram~=2.14
+aiogram~=2.19
 environs~=8.0.0
 pandas

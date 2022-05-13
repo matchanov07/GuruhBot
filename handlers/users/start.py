@@ -5,9 +5,9 @@ from aiogram.dispatcher.filters.builtin import CommandStart
 
 from data.config import ADMINS
 from loader import dp, db, bot
+from filters.private import IsPrivate
 
-
-@dp.message_handler(CommandStart())
+@dp.message_handler(IsPrivate() ,CommandStart())
 async def bot_start(message: types.Message):
     name = message.from_user.full_name
     # Foydalanuvchini bazaga qo'shamiz
